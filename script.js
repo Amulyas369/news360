@@ -25,13 +25,21 @@ function bindData(articles) {
 
     cardsContainer.innerHTML = "";
 
-    articles.map((article) => {
-        if (!article.urlToImage) return;
-        const cardClone = newsCardTemplate.content.cloneNode(true);
-        fillDataInCard(cardClone, article);
-        cardsContainer.appendChild(cardClone);
-    });
+    // Check if articles is an array and not undefined
+    if (Array.isArray(articles) && articles.length > 0) {
+        articles.forEach((article) => {
+            if (article.urlToImage) {
+                const cardClone = newsCardTemplate.content.cloneNode(true);
+                fillDataInCard(cardClone, article);
+                cardsContainer.appendChild(cardClone);
+            }
+        });
+    } else {
+        // Handle the case where articles is undefined or empty
+        cardsContainer.innerHTML = "<p>No news articles found.</p>";
+    }
 }
+
 
 function fillDataInCard(cardClone, article) {
     const newsImg = cardClone.querySelector("#news-img");

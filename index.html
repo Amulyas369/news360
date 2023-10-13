@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <header class='header-desk'>
+        <div class='header'>
+    
+        <nav class="navbar">
+            <div class="logo">
+                <h2 onclick="reload()">DailyTrends360</h2>
+            </div>
+            <ul class='nav-link'>
+              <li class="nav-opt home_click" id="home_click">Home</li>
+             <li class="nav-opt about_click" id="about_click">About </li> 
+             <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">Sports</li>
+             <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+             <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+            <li class="nav-opt service_click" id="service_click">Service</li> 
+              <li class="nav-opt contact_click" id="contact_click">Contact</li>
+              <li class='button'><a href="">Subscribe</a></li>
+            </ul>
+            <div  class='menubar'>
+              <span class='manuBar-stick'id="stick1"></span>
+              <span class='manuBar-stick'id="stick3"></span>
+              <span class='manuBar-stick'id="stick2"></span>
+              
+            </div>
+            <div class="search-bar flex searchbar_res">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </nav>
+        </div>
+        <div class="responsive-nav" >
+        <ul class='respnav-link'>
+              <li class='res-home home_res' data-text='Home'>Home</li>
+              <hr/>
+              <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">Sports</li>
+              <hr/>
+              <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+              <hr/>
+              <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+              <hr>
+              <li class="about_res">About</li>
+              <hr/>
+              <li class="service_res">Service</li>
+              <hr/>
+              <li class="contact_res">Contact</li>
+              <hr/>
+              <li><div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div></li>
+            <hr/>
+            <li class='button'><a href="">Enquery</a></li>
+            <hr/>
+            </ul>
+            
+        </div>
+    </header>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+
+
+
+
+<!-- for Contact -->
+
+
+  <section class="contact other_tab" id="contact">
+
+    <div class="contact-content section-content">
+  
+      <p class="section-subtitle">Contact</p>
+  
+      <h2 class="h3 section-title">Have You Any Query?<br/> Please Drop a Message</h2>
+  
+      <p class="section-text">
+        Get in touch and let me know how i can help. Fill out the form and i’ll be in touch as soon as possible.
+      </p>
+  
+      <ul class="contact-list">
+  
+        <li class="contact-list-item">
+  
+          <div class="contact-item-icon">
+            <ion-icon name="location-outline"></ion-icon>
+          </div>
+  
+          <div class="wrapper">
+            <h3 class="h4 contact-item-title">Address:</h3>
+  
+            <address class="contact-info">
+              Jaleswar,Balasore,Odisha,India-756032
+            </address>
+          </div>
+  
+        </li>
+  
+        <li class="contact-list-item">
+  
+          <div class="contact-item-icon">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+  
+          <div class="wrapper">
+            <h3 class="h4 contact-item-title">Phone:</h3>
+  
+            <a href="tel:01234567789" class="contact-info">(11) 234 567 789</a>
+             <br/>
+            <a href="tel:09765432200" class="contact-info">(+91) 7438756195</a>
+          </div>
+  
+        </li>
+  
+        <li class="contact-list-item">
+  
+          <div class="contact-item-icon">
+            <ion-icon name="mail-outline"></ion-icon>
+          </div>
+  
+          <div class="wrapper">
+            <h3 class="h4 contact-item-title">Email:</h3>
+  
+            <a href="mailto:hr@requirmentsolution.com" class="contact-info">dailytrending360@gmail.com</a>
+             <br/>
+            <a href="mailto:support@requirmentsolution.com" class="contact-info">support@dailytrending360.com</a>
+          </div>
+  
+        </li>
+  
+        <li>
+          <ul class="contac-social-list">
+  
+            <li>
+              <a href="" target="_blank" class="contact-social-link">
+                <div class="tooltip">Facebook</div>
+  
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="" target="_blank" class="contact-social-link">
+                <div class="tooltip">Twitter</div>
+  
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="" target="_blank" class="contact-social-link">
+                <div class="tooltip">Linkedin</div>
+  
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="" target="_blank" class="contact-social-link">
+                <div class="tooltip">Youtube</div>
+  
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </li>
+  
+      </ul>
+  
+    </div>
+  
+    <form  class="contact-form" onsubmit="sendMassage(event);reset();return false">
+  
+      <div class="form-wrapper">
+  
+        <label for="name" class="form-label">Name</label>
+  
+        <div class="input-wrapper">
+  
+          <input type="text" name="name" id="name" required placeholder="e.g Amulya Senapati" class="input-field">
+  
+          <ion-icon name="person-circle"></ion-icon>
+  
+        </div>
+  
+      </div>
+  
+      <div class="form-wrapper">
+  
+        <label for="email" class="form-label">Email</label>
+  
+        <div class="input-wrapper">
+  
+          <input type="email" name="email" id="email" required placeholder="e.g amulya@mail.com"
+            class="input-field">
+  
+          <ion-icon name="mail"></ion-icon>
+  
+        </div>
+  
+      </div>
+  
+      <div class="form-wrapper">
+  
+        <label for="phone" class="form-label">Phone</label>
+  
+        <div class="input-wrapper">
+  
+          <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
+  
+          <ion-icon name="call"></ion-icon>
+  
+        </div>
+  
+      </div>
+  
+      <div class="form-wrapper">
+  
+        <label for="message" class="form-label">Message</label>
+  
+        <div class="input-wrapper">
+  
+          <textarea name="message" id="message" required placeholder="Write message..."
+            class="input-field"></textarea>
+  
+          <ion-icon name="chatbubbles"></ion-icon>
+  
+        </div>
+  
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Send</button>
+  
+    </form>
+  
+  </section>
+
+<div class="other_tab about"> 
+<div class="logo_container">
+  <img src="assets/logo.jpg" alt="">
+</div>
+<h1 class="domain_name">DailyTrends360</h1>
+<div class="descrpition-about">
+  <p>Welcome to <strong>DailyTrends360</strong>, your go-to source for the latest news, trends, and insights shaping our world today. We are more than just a news blog; we are your daily companion, offering a 360-degree view of the most significant events, ideas, and developments from around the globe.</p>
+  <h3>OUR MISSION</h3>
+  <p>At DailyTrends360, we are on a mission to empower our readers with accurate, insightful, and thought-provoking content. We believe in the power of information to drive positive change and inspire meaningful conversations. Our dedicated team of writers, researchers, and editors is committed to delivering news stories that matter, spanning across diverse topics such as technology, science, business, culture, politics, and more.</p>
+</div>
+</div>
+<div class="other_tab service">Service Comming soon</div>
+
+
+
+
+
+
+
+   <footer class="footer">
+     <div class="upper_footer">
+        <div class="footer_left">
+            <div class="bloger_profile">
+                <h1></h1>
+                <h2 class="name">DailyTrands360</h2>
+            </div>
+            <h3>Delhi, India</h3>
+            <h3>Contact No: 7438850195</h3>
+            <form class="mailus">
+                <input type="email" id="email" name="email" placeholder="i.e amulya@gmail.com" required /><button type="submit" class="email_btn"><a href="mailto:amulyas.cf@gmail.com">Send</a></button>
+            </form>
+        </div>
+    <div class="footer_middle">
+        <div class="our_partener followus">Our Parteners:</div>
+        <div class="partener_img">
+            <img src="https://mediabrief.com/wp-content/uploads/2022/03/IMAGE-Aaj-Tak-is-the-most-searched-keyword-during-counting-hours-MEDIABRIEF.png" alt="">
+            <img src="https://bcassetcdn.com/public/blog/wp-content/uploads/2021/11/06183243/NBC-1.png" alt="">
+        </div>
+    </div>
+
+
+        <div class="footer_right">
+      <div class="followus">Follow Us:</div>      
+
+ <ul class="contac-social-list">
+
+          <li>
+            <a href="" target="_blank" class="contact-social-link">
+              <div class="tooltip">Facebook</div>
+
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="" target="_blank" class="contact-social-link">
+              <div class="tooltip">Twitter</div>
+
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="" target="_blank" class="contact-social-link">
+              <div class="tooltip">Linkedin</div>
+
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="" target="_blank" class="contact-social-link">
+              <div class="tooltip">Youtube</div>
+
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        </div>
+     </div>
+     <div class="lower_footer">&copy; 2023 <span>Dailytrends360</span>. All rights reserved.</div>
+   </footer>
+    <script  src="script.js"></script>
+    <!-- <script type="module" src="firebase.js"></script> -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("BXHjWXKouW7Y_6_7s");
+})();
+</script>
+
+</body>
+</html>
